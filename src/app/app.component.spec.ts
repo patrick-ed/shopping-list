@@ -20,10 +20,11 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('shopping-list');
   });
 
-  it('should render title', () => {
+  it('should contain router outlet', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, shopping-list');
+    const routerOutlet = compiled.querySelector('router-outlet');
+    expect(routerOutlet).toBeTruthy();
   });
 });

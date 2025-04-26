@@ -1,0 +1,22 @@
+<h1>Authentication page</h1>
+
+@if (currentUser(); as user) {
+<div>
+  <h2>Welcome, {{ user!.name }}!</h2>
+  <p>Email: {{ user!.email }}</p>
+  <img [src]="user!.photoUrl" alt="Profile photo" />
+</div>
+} @else{
+<div class="logged-out-container">
+  <p>Please sign in with Google to continue</p>
+  <asl-google-signin-button
+    type="standard"
+    size="large"
+    text="signin_with"
+    shape="pill"
+    theme="outline"
+    logo_alignment="center"
+  >
+  </asl-google-signin-button>
+</div>
+}
