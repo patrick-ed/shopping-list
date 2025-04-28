@@ -5,7 +5,8 @@ import com.patrickdumdum.shopping_list.repository.UserRepository
 import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/users")
+@CrossOrigin(origins = ["http://localhost:4200"])
 class UserController(private val userRepository: UserRepository) {
 
     @GetMapping
