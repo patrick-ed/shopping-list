@@ -32,6 +32,7 @@ export class AuthComponent implements OnInit {
       next: (user) => this.currentUser.set(user),
       error: (err) => console.error('Authentication error:', err)
     });
+
   }
 
   signOut(): void {
