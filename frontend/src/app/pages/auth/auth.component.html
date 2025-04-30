@@ -11,12 +11,7 @@
   <mat-card-content>
     @if (currentUser(); as user) {
     <div class="user-profile">
-      <img
-        [src]="user.photoUrl"
-        alt="Profile photo"
-        class="user-avatar"
-        onerror="this.src='/assets/default-avatar.png'"
-      />
+      <img [src]="user.photoUrl" alt="Profile photo" class="user-avatar" />
       <div class="user-info">
         <h2 class="user-name mat-headline-6">{{ user.firstName }}</h2>
         <p class="user-email mat-body-1">{{ user.email }}</p>
