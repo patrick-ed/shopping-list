@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AuthComponent } from './auth.component';
+import { PinboardComponent } from '../../../app/pages/pinboard/pinboard.component';
 
-describe('AuthComponent', () => {
-  let component: AuthComponent;
-  let fixture: ComponentFixture<AuthComponent>;
+describe('PinboardComponent', () => {
+  let component: PinboardComponent;
+  let fixture: ComponentFixture<PinboardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AuthComponent]
+      imports: [PinboardComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AuthComponent);
+    fixture = TestBed.createComponent(PinboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
